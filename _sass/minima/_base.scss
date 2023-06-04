@@ -66,9 +66,11 @@ main {
 img {
   max-width: 100%;
   vertical-align: middle;
+
+  .img-title {
+    margin-top: 50px;
+  }
 }
-
-
 
 /**
  * Figures

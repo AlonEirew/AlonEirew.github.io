@@ -3,7 +3,6 @@ layout: page
 title: About
 permalink: /about/
 ---
-<img src="../assets/img/alon_eirew.png" alt="Image" width="210" height="200">
 
 Hi, I'm Alon Eirew, a Computer Science Ph.D. candidate at Bar-Ilan University, and an NLP expert with over 15 years of experience in software development and architecture. 
 

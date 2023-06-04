@@ -1,14 +1,26 @@
 <header class="site-header">
 
-<!--  <div class="social-links">-->
-<!--    {%- include social.html -%}-->
-<!--  </div>-->
-
   <div class="wrapper">
     {%- assign default_paths = site.pages | map: "path" -%}
     {%- assign page_paths = site.header_pages | default: default_paths -%}
     {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
-    <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+
+<!--    <img class="img-title" src="../assets/img/alon_eirew.png" width="100" height="100">-->
+<!--    <div class="social-links">-->
+      <ul class="site-title"><img src="../assets/img/alon_eirew.png" width="120" height="120"></ul>
+      <ul class="social-media-list">
+        <li><a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a></li>
+        <li>
+        {%- for entry in site.minima.social_links -%}
+          <a {% unless entry.platform == 'rss' %}rel="me" {% endunless %}href="{{ entry.user_url }}" target="_blank" title="{{ entry.title | default: entry.platform }}">
+          <svg class="svg-icon">
+            <use xlink:href="{{ '/assets/minima-social-icons.svg#' | append: entry.platform | relative_url }}"></use>
+          </svg>
+          </a>
+        {%- endfor -%}
+        </li>
+      </ul>
+<!--    </div>-->
 
     {%- if titles_size > 0 -%}
       <nav class="site-nav">
