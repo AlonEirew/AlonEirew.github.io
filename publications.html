@@ -1,0 +1,77 @@
+---
+layout: page
+title: Research
+permalink: /pub/
+---
+
+<html>
+<head>
+    <title>Research Publication</title>
+</head>
+<body>
+<h1>Publication</h1>
+<table id="publications">
+    <thead>
+    <tr>
+        <th>Title</th>
+        <th>Authors</th>
+        <th>Venue</th>
+        <th>Year</th>
+    </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+
+<script>
+    function readXML() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                var xmlDoc = this.responseXML;
+                var publications = xmlDoc.getElementsByTagName("inproceedings");
+                var tableBody = document.querySelector("#publications tbody");
+                for (var i = 0; i < publications.length; i++) {
+                    var title = publications[i].getElementsByTagName("title")[0]
+                        .childNodes[0].nodeValue;
+                    var authors = publications[i].getElementsByTagName("author");
+                    var authorNames = [];
+                    for (var j = 0; j < authors.length; j++) {
+                        if (authors[j].childNodes[0].nodeValue == "Alon Eirew") {
+                            authorNames.push(
+                                "<b>" + authors[j].childNodes[0].nodeValue + "</b>"
+                            );
+                        } else {
+                            authorNames.push(authors[j].childNodes[0].nodeValue);
+                        }
+                    }
+                    var year = publications[i].getElementsByTagName("year")[0]
+                        .childNodes[0].nodeValue;
+                    var booktitle = publications[i].getElementsByTagName("booktitle")[0]
+                        .childNodes[0].nodeValue.split(" ")[0];
+
+                    var link = publications[i].getElementsByTagName("ee")[0]
+                        .childNodes[0].nodeValue.split(" ")[0];
+
+                    var row = document.createElement("tr");
+                    row.innerHTML =
+                        "<td><a href=" + link + ">" +
+                        title +
+                        "</a></td><td>" +
+                        authorNames.join(", ") +
+                        "</td><td>" +
+                        booktitle +
+                        "</td><td>" +
+                        year +
+                        "</td>";
+                    tableBody.appendChild(row);
+                }
+            }
+        };
+        xhttp.open("GET", "https://dblp.org/pid/224/0006.xml", true);
+        xhttp.send();
+    }
+
+    readXML();
+</script>
+</body>
+</html>
