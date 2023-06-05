@@ -3,7 +3,7 @@ layout: post
 title:  "The Transformative Power of Technology — The Print-on-Demand Case Study"
 date:   2023-05-01 09:00:00 +0000
 categories: posts
-image: /assets/img/print-on-demand.jpeg
+image: /assets/img/posts/print-on-demand.jpeg
 ---
 Recently, I’ve been introduced to a huge industry that I was previously unaware of — The Print-on-Demand (PoD) industry, and the story behind its growth serves as a compelling testament to human ingenuity and the transformative power of technology.
 

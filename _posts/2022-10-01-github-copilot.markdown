@@ -3,7 +3,7 @@ layout: post
 title:  "GitHub Copilot — The beginning of the future of software development"
 date:   2022-10-01 09:00:00 +0000
 categories: posts
-image: /assets/img/copilot_illus.webp
+image: /assets/img/posts/copilot_illus.webp
 ---
 
 <figure>
