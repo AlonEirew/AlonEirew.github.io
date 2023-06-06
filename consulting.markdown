@@ -13,10 +13,10 @@ weight: 2
 ### NLP Consulting Expertise (im working at Israel)
 
 1) **NLP Roadmap and Architecture --**
-Are you planning to develop a new NLP product or solution but need guidance in defining the software development roadmap and architecture? I can help you chart a clear path forward, identify the right tools, frameworks, and infrastructures that align with your specific requirements.
+Help defining the software development roadmap and architecture for a new project. I can help chart a clear path forward, identify the right tools, frameworks, and infrastructures that align to specific requirements.
 
 2) **NLP Solution Enhancement and Optimization --**
-If you already have an existing NLP solution but are facing challenges such as scalability, bottlenecks, or performance issues, I will thoroughly analyze your solution to identify areas for improvement. Whether it involves optimizing algorithms, refining data processing pipelines, or leveraging distributed computing technologies.
+Help overcome challenges such as scalability, bottlenecks, or performance issues, in existing projects. I will thoroughly analyze your solution to identify areas for improvement. Whether it involves optimizing algorithms, refining data processing pipelines, or leveraging distributed computing technologies.
 
 3) **Data Acquisition and Annotations --**
 Gathering high-quality data and developing automatic annotation schemas is crucial for building robust NLP solutions. I can help find relevant data resources in a specific domain. Guide you in designing effective annotation schemas and developing automated processes to expedite annotation of newly created or existing datasets.
