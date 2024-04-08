@@ -7,6 +7,7 @@ image_2: /assets/img/logo/oloo.png
 image_3: /assets/img/logo/deep.webp
 image_4: /assets/img/logo/pm_office.png
 image_5: /assets/img/logo/Intel_Ignite_Logo.png
+image_6: /assets/img/logo/blaze.png
 weight: 2
 ---
 
@@ -45,5 +46,6 @@ Navigating the vast landscape of academic literature and research publications c
 <div style="text-align: center">
     <p float="center">
       <img src="{{ page.image_4 }}" width="200" height="150" />
+      <img src="{{ page.image_6 }}" width="200" height="150" />
     </p>
 </div>
