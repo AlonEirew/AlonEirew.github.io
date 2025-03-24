@@ -12,10 +12,9 @@ weight: 2
 ---
 
 ## AI/NLP Consulting for Startups & VCs:
-- Information extraction and retrieval, semantic understanding, data mining, and large language models (LLM's).
-- Document intelligence (legal, clinical, financial, educational, etc.)
-- Information reasoning & cross-document analysis
-- AI due diligence for investment firms and accelerators
+- I specialize in extracting, searching, and understanding relationships within unstructured data, whether it appears in a single document or spans across multiple sources.
+- This includes document intelligence across domains such as legal, clinical, financial, and educational, among others—where the goal is to extract and connect entities, events, and concepts. For example, this could involve analyzing patient clinical records to build a disease timeline, or searching and investigating legal cases with similar patterns or underlying structures.
+- My expertise ranges from core AI, machine learning, and deep learning methodologies, to hands-on experience in conducting research and developing models that solve complex NLP challenges.
 
 ---
 
