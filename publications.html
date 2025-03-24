@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Research
+title: Publications
 permalink: /pub/
 weight: 3
 ---
@@ -15,7 +15,6 @@ weight: 3
     <tr>
         <th>Title</th>
         <th>Authors</th>
-        <th>Venue</th>
         <th>Year</th>
     </tr>
     </thead>
@@ -28,12 +27,34 @@ weight: 3
         xhttp.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
                 var xmlDoc = this.responseXML;
+                var allPublications = [];
                 var publications = xmlDoc.getElementsByTagName("inproceedings");
+                var articles = xmlDoc.getElementsByTagName("article");
+                // for (var i = 0; i < publications.length; i++) {
+                //     allPublications.push(publications[i]);
+                //     var found = -1;
+                //     for (var j = 0; j < articles.length; j++) {
+                //         var pubTitle = publications[i].getElementsByTagName("title")[0]
+                //             .childNodes[0].nodeValue;
+                //         var artTitle = articles[j].getElementsByTagName("title")[0]
+                //             .childNodes[0].nodeValue;
+                //         if (pubTitle === artTitle) {
+                //             found = j;
+                //         }
+                //     }
+                //
+                //     if (found >= 0) {
+                //         articles.splice(found, 1);
+                //     }
+                // }
+
+                allPublications.push(...articles);
+
                 var tableBody = document.querySelector("#publications tbody");
-                for (var i = 0; i < publications.length; i++) {
-                    var title = publications[i].getElementsByTagName("title")[0]
+                for (var i = 0; i < allPublications.length; i++) {
+                    var title = allPublications[i].getElementsByTagName("title")[0]
                         .childNodes[0].nodeValue;
-                    var authors = publications[i].getElementsByTagName("author");
+                    var authors = allPublications[i].getElementsByTagName("author");
                     var authorNames = [];
                     for (var j = 0; j < authors.length; j++) {
                         if (authors[j].childNodes[0].nodeValue == "Alon Eirew") {
@@ -44,12 +65,16 @@ weight: 3
                             authorNames.push(authors[j].childNodes[0].nodeValue);
                         }
                     }
-                    var year = publications[i].getElementsByTagName("year")[0]
+                    var year = allPublications[i].getElementsByTagName("year")[0]
                         .childNodes[0].nodeValue;
-                    var booktitle = publications[i].getElementsByTagName("booktitle")[0]
-                        .childNodes[0].nodeValue.split(" ")[0];
+                    // var booktitle = allPublications[i].getElementsByTagName("booktitle")[0]
+                    //     .childNodes[0].nodeValue.split(" ")[0];
+                    // if (booktitle === undefined) {
+                    //     booktitle = allPublications[i].getElementsByTagName("journal")[0]
+                    //         .childNodes[0].nodeValue.split(" ")[0];
+                    // }
 
-                    var link = publications[i].getElementsByTagName("ee")[0]
+                    var link = allPublications[i].getElementsByTagName("ee")[0]
                         .childNodes[0].nodeValue.split(" ")[0];
 
                     var row = document.createElement("tr");
@@ -58,8 +83,6 @@ weight: 3
                         title +
                         "</a></td><td>" +
                         authorNames.join(", ") +
-                        "</td><td>" +
-                        booktitle +
                         "</td><td>" +
                         year +
                         "</td>";
