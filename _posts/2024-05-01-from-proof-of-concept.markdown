@@ -8,8 +8,6 @@ image1: /assets/img/posts/poc_illus.webp
 image2: /assets/img/posts/venturebeat.webp
 ---
 
-Recently, I’ve been introduced to a huge industry that I was previously unaware of — The Print-on-Demand (PoD) industry, and the story behind its growth serves as a compelling testament to human ingenuity and the transformative power of technology.
-
 <figure>
   <img src="{{ page.image1 }}">
 </figure>
